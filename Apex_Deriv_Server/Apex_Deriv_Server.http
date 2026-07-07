@@ -1,0 +1,6 @@
+@Apex_Deriv_Server_HostAddress = http://localhost:5220
+
+GET {{Apex_Deriv_Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
