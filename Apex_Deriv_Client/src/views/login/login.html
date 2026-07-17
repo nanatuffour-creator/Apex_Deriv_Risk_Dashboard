@@ -1,0 +1,132 @@
+<div class="signin-container">
+
+    <!-- LEFT SIDE -->
+    <div class="left-panel">
+
+        <a routerLink="/" class="back-home">
+            <i class="bi bi-arrow-left"></i>
+            Back to Home
+        </a>
+
+        <div class="branding">
+
+            <h1>
+                <span class="text-primary">Apex</span>Deriv
+            </h1>
+
+            <h2>
+                Multi-Asset Derivative
+                Risk Dashboard
+            </h2>
+
+            <p>
+                Securely manage portfolios, monitor derivatives,
+                analyze risk, and generate institutional reports
+                from a single platform.
+            </p>
+
+            <div class="market-info">
+
+                <div class="market-card">
+                    <span>Portfolio Value</span>
+                    <h3>$2.43M</h3>
+                </div>
+
+                <div class="market-card">
+                    <span>Today's P/L</span>
+                    <h3 class="text-success">+$42,600</h3>
+                </div>
+
+                <div class="market-card">
+                    <span>Risk Score</span>
+                    <h3 class="text-warning">Medium</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right-panel">
+
+        <div class="login-card">
+
+            <h2>Welcome Back</h2>
+
+            <p>
+                Sign in to your ApexDeriv account
+            </p>
+            <form [formGroup]="loginData" (ngSubmit)="verifyUser()">
+
+                <div class="server-error" *ngIf="serverError">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    <span>{{ serverError }}</span>
+                </div>
+
+                <div class="mb-3">
+
+                    <label>Email</label>
+
+                    <input type="email" class="form-control" formControlName="email"
+                        [class.is-invalid]="getControl('email')?.touched && getControl('email')?.invalid">
+
+                    <div class="field-error" *ngIf="getFieldError('email')">{{ getFieldError('email') }}</div>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label>Password</label>
+
+                    <input type="password" class="form-control" formControlName="password"
+                        [class.is-invalid]="getControl('password')?.touched && getControl('password')?.invalid">
+
+                    <div class="field-error" *ngIf="getFieldError('password')">{{ getFieldError('password') }}</div>
+
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+
+                    <div class="form-check">
+
+                        <input class="form-check-input" type="checkbox">
+
+                        <label class="form-check-label">
+
+                            Remember Me
+
+                        </label>
+
+                    </div>
+
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+                <button class="btn btn-primary w-100" [disabled]="isSubmitting || loginData.invalid">
+                    {{ isSubmitting ? 'Signing In...' : 'Sign In' }}
+                </button>
+
+            </form>
+
+            <div class="text-center mt-4">
+
+                Don't have an account?
+
+                <a routerLink="/register">
+
+                    Create Account
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

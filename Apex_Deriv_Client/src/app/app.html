@@ -1,0 +1,70 @@
+<ng-container *ngIf="showShell; else noShellLayout">
+  <div class="app-shell" [class.sidebar-collapsed]="sidebarCollapsed">
+
+    <aside class="sidebar h-100" [class.collapsed]="sidebarCollapsed">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <div class="brand-icon">A</div>
+          <div class="brand-text">
+            <p class="brand-title">ApexDeriv</p>
+            <small class="text-muted">Risk Dashboard</small>
+          </div>
+        </div>
+      </div>
+      <ul class="sidebar-nav">
+        <a routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          <i class="bi bi-speedometer2"></i>
+          <span class="nav-text">Dashboard</span>
+        </a>
+        <a routerLink="/portfolio" routerLinkActive="active">
+          <i class="bi bi-pie-chart-fill"></i>
+          <span class="nav-text">Portfolio Overview</span>
+        </a>
+        <a routerLink="/market-data" routerLinkActive="active">
+          <i class="bi bi-graph-up-arrow"></i>
+          <span class="nav-text">Market Data</span>
+        </a>
+        <a routerLink="/assets-and-derivatives" routerLinkActive="active">
+          <i class="bi bi-bank"></i>
+          <span class="nav-text">Asset & Derivatives</span>
+        </a>
+        <a routerLink="/risk-analysis" routerLinkActive="active">
+          <i class="bi bi-shield-check"></i>
+          <span class="nav-text">Risk Analysis</span>
+        </a>
+        <a routerLink="/reports" routerLinkActive="active">
+          <i class="bi bi-file-earmark-text-fill"></i>
+          <span class="nav-text">Reports</span>
+        </a>
+        <a routerLink="/settings" routerLinkActive="active">
+          <i class="bi bi-gear-fill"></i>
+          <span class="nav-text">Settings</span>
+        </a>
+      </ul>
+    </aside>
+
+    <div class="content-shell">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button type="button" class="sidebar-hamburger" (click)="toggleSidebar()" aria-label="Toggle sidebar">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="page-heading h-100">
+            <h1>{{ pageTitle }}</h1>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #noShellLayout>
+  <main class="page-content plain-content p-0">
+    <router-outlet></router-outlet>
+  </main>
+</ng-template>
+

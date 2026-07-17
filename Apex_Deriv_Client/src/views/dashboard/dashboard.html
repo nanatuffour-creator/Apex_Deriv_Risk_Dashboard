@@ -1,0 +1,380 @@
+<!-- ==================================================================
+     APEXDERIV | MULTI-ASSET DERIVATIVE RISK DASHBOARD
+     ================================================================== -->
+<div class="apex-dashboard">
+
+  <!-- ==================================================================
+       PAGE HEADER
+       ================================================================== -->
+  <div
+    class="d-flex flex-wrap justify-content-between align-items-start align-items-md-center gap-3 mb-4 apex-page-header">
+    <div>
+      <h1 class="apex-title mb-1">Dashboard</h1>
+      <p class="apex-subtitle mb-0">Welcome back. Here's an overview of your portfolio performance, market activity, and
+        portfolio risk.</p>
+    </div>
+
+    <div class="d-flex flex-wrap align-items-center gap-2">
+      <div class="apex-date-chip d-none d-md-flex align-items-center">
+        <i class="bi bi-calendar3 me-2"></i>
+        <span>{{ today | date:'EEEE, MMM d, y' }}</span>
+      </div>
+
+      <button type="button" class="btn apex-btn-outline d-flex align-items-center gap-2" (click)="refreshDashboard()">
+        <i class="bi bi-arrow-clockwise"></i>
+        <span class="d-none d-sm-inline">Refresh</span>
+      </button>
+
+      <button type="button" class="btn apex-btn-icon position-relative" aria-label="Notifications">
+        <i class="bi bi-bell"></i>
+        <span class="apex-notif-dot"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================================================================
+       KEY PERFORMANCE INDICATORS
+       ================================================================== -->
+  <div class="row g-3 mb-4">
+    <div class="col-6 col-md-4 col-xl-2" *ngFor="let kpi of kpiCards">
+      <div class="apex-card apex-kpi-card h-100">
+        <div class="d-flex align-items-start justify-content-between mb-3">
+          <div class="apex-kpi-icon">
+            <i class="bi" [ngClass]="kpi.icon"></i>
+          </div>
+          <span *ngIf="kpi.badge" class="badge apex-badge-{{ kpi.badge.variant }}">{{ kpi.badge.text }}</span>
+        </div>
+        <div class="apex-kpi-value">{{ kpi.value }}</div>
+        <div class="apex-kpi-title">{{ kpi.title }}</div>
+        <div *ngIf="kpi.change" class="apex-kpi-change mt-2"
+          [ngClass]="{'text-success': kpi.changeDirection === 'up', 'text-danger': kpi.changeDirection === 'down', 'apex-muted': kpi.changeDirection === 'neutral'}">
+          <i class="bi"
+            [ngClass]="kpi.changeDirection === 'up' ? 'bi-arrow-up-short' : (kpi.changeDirection === 'down' ? 'bi-arrow-down-short' : 'bi-dash')"></i>
+          {{ kpi.change }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================================
+       PORTFOLIO PERFORMANCE  +  ASSET ALLOCATION
+       ================================================================== -->
+  <div class="row g-3 mb-4">
+
+    <!-- Portfolio Performance -->
+    <div class="col-12 col-xl-8">
+      <div class="apex-card h-100">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 class="apex-card-title mb-0">Portfolio Performance</h2>
+          <div class="apex-segment d-none d-sm-flex">
+            <button class="apex-segment-btn active" type="button">1M</button>
+            <button class="apex-segment-btn" type="button">3M</button>
+            <button class="apex-segment-btn" type="button">1Y</button>
+            <button class="apex-segment-btn" type="button">ALL</button>
+          </div>
+        </div>
+
+        <!-- Chart placeholder: reserved for ApexCharts / Chart.js integration -->
+        <div class="apex-chart-placeholder d-flex flex-column align-items-center justify-content-center mb-3">
+          <i class="bi bi-graph-up apex-placeholder-icon"></i>
+          <p class="apex-muted mb-0 mt-2">Portfolio performance chart will be displayed here.</p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-6 col-lg-3" *ngFor="let metric of performanceMetrics">
+            <div class="apex-mini-stat">
+              <div class="apex-mini-stat-label">{{ metric.label }}</div>
+              <div class="apex-mini-stat-value" [ngClass]="metric.direction === 'up' ? 'text-success' : 'text-danger'">
+                <i class="bi" [ngClass]="metric.direction === 'up' ? 'bi-caret-up-fill' : 'bi-caret-down-fill'"></i>
+                {{ metric.value }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Asset Allocation -->
+    <div class="col-12 col-xl-4">
+      <div class="apex-card h-100">
+        <h2 class="apex-card-title mb-3">Asset Allocation</h2>
+
+        <!-- Chart placeholder: reserved for ApexCharts / Chart.js pie chart -->
+        <div class="apex-donut-placeholder d-flex flex-column align-items-center justify-content-center mb-3">
+          <i class="bi bi-pie-chart apex-placeholder-icon"></i>
+          <p class="apex-muted mb-0 mt-2 small">Allocation chart will be displayed here.</p>
+        </div>
+
+        <div class="apex-allocation-list">
+          <div class="apex-allocation-row" *ngFor="let a of assetAllocation">
+            <div class="d-flex align-items-center gap-2">
+              <span class="apex-dot" [style.background]="a.color"></span>
+              <span class="apex-allocation-label">{{ a.label }}</span>
+            </div>
+            <div class="d-flex align-items-center gap-2 apex-allocation-bar-wrap">
+              <div class="apex-allocation-bar">
+                <div class="apex-allocation-fill" [style.width.%]="a.value" [style.background]="a.color"></div>
+              </div>
+              <span class="apex-allocation-value">{{ a.value }}%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================================
+       MARKET OVERVIEW
+       ================================================================== -->
+  <div class="apex-card mb-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h2 class="apex-card-title mb-0">Market Overview</h2>
+      <i class="bi bi-three-dots apex-muted"></i>
+    </div>
+    <div class="table-responsive">
+      <table class="table apex-table align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Asset</th>
+            <th>Current Price</th>
+            <th>Daily Change</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of marketOverview">
+            <td>
+              <div class="fw-semibold apex-cell-title">{{ row.asset }}</div>
+              <div class="apex-muted small">{{ row.symbol }}</div>
+            </td>
+            <td class="apex-mono">{{ row.price }}</td>
+            <td>
+              <span [ngClass]="row.direction === 'up' ? 'text-success' : 'text-danger'">
+                <i class="bi" [ngClass]="row.direction === 'up' ? 'bi-arrow-up-short' : 'bi-arrow-down-short'"></i>
+                {{ row.change }}
+              </span>
+            </td>
+            <td>
+              <span class="badge apex-badge-status"
+                [ngClass]="{'apex-badge-success': row.status === 'Active', 'apex-badge-warning': row.status === 'Watch', 'apex-badge-neutral': row.status === 'Closed'}">
+                {{ row.status }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ==================================================================
+       TOP HOLDINGS
+       ================================================================== -->
+  <div class="apex-card mb-4">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h2 class="apex-card-title mb-0">Top Holdings</h2>
+      <button class="btn apex-btn-link btn-sm">View all <i class="bi bi-arrow-right ms-1"></i></button>
+    </div>
+    <div class="table-responsive">
+      <table class="table apex-table align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Asset</th>
+            <th>Asset Class</th>
+            <th>Market Value</th>
+            <th>Allocation</th>
+            <th>Daily Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let h of topHoldings">
+            <td class="fw-semibold apex-cell-title">{{ h.asset }}</td>
+            <td><span class="badge apex-badge-neutral">{{ h.assetClass }}</span></td>
+            <td class="apex-mono">{{ h.marketValue }}</td>
+            <td>
+              <div class="d-flex align-items-center gap-2">
+                <div class="apex-progress">
+                  <div class="apex-progress-fill" [style.width.%]="h.allocation"></div>
+                </div>
+                <span class="apex-mono small">{{ h.allocation }}%</span>
+              </div>
+            </td>
+            <td>
+              <span [ngClass]="h.direction === 'up' ? 'text-success' : 'text-danger'">
+                <i class="bi" [ngClass]="h.direction === 'up' ? 'bi-arrow-up-short' : 'bi-arrow-down-short'"></i>
+                {{ h.change }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ==================================================================
+       RECENT TRANSACTIONS  +  MARKET NEWS
+       ================================================================== -->
+  <div class="row g-3 mb-4">
+
+    <!-- Recent Transactions Timeline -->
+    <div class="col-12 col-lg-6">
+      <div class="apex-card h-100">
+        <h2 class="apex-card-title mb-3">Recent Transactions</h2>
+        <div class="apex-timeline">
+          <div class="apex-timeline-item" *ngFor="let t of recentTransactions">
+            <div class="apex-timeline-icon apex-icon-bg-{{ t.iconBg }}">
+              <i class="bi" [ngClass]="t.icon"></i>
+            </div>
+            <div class="apex-timeline-content">
+              <div class="d-flex justify-content-between align-items-start">
+                <span class="apex-cell-title fw-semibold">{{ t.title }}</span>
+                <span class="apex-muted small ms-2 text-nowrap">{{ t.time }}</span>
+              </div>
+              <p class="apex-muted small mb-0">{{ t.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Market News -->
+    <div class="col-12 col-lg-6">
+      <div class="apex-card h-100">
+        <h2 class="apex-card-title mb-3">Market News</h2>
+        <div class="apex-news-list">
+          <div class="apex-news-item" *ngFor="let n of marketNews">
+            <div class="apex-news-icon">
+              <i class="bi" [ngClass]="n.icon"></i>
+            </div>
+            <div class="flex-grow-1">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="apex-news-category">{{ n.category }}</span>
+                <span class="apex-muted small">&middot; {{ n.time }}</span>
+              </div>
+              <p class="apex-news-headline mb-0">{{ n.headline }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================================
+       PORTFOLIO RISK SUMMARY
+       ================================================================== -->
+  <div class="apex-card mb-4">
+    <h2 class="apex-card-title mb-3">Portfolio Risk Summary</h2>
+    <div class="row g-3">
+      <div class="col-6 col-lg-3" *ngFor="let r of riskMetrics">
+        <div class="apex-risk-mini-card">
+          <div class="apex-risk-icon"><i class="bi" [ngClass]="r.icon"></i></div>
+          <div class="apex-risk-value">{{ r.value }}</div>
+          <div class="apex-risk-label">{{ r.label }}</div>
+          <div class="apex-risk-sub">{{ r.sub }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================================
+       WATCHLIST  +  UPCOMING EVENTS
+       ================================================================== -->
+  <div class="row g-3 mb-4">
+
+    <!-- Watchlist -->
+    <div class="col-12 col-lg-6">
+      <div class="apex-card h-100">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 class="apex-card-title mb-0">Watchlist</h2>
+          <i class="bi bi-star apex-muted"></i>
+        </div>
+        <div class="table-responsive">
+          <table class="table apex-table align-middle mb-0">
+            <thead>
+              <tr>
+                <th>Asset</th>
+                <th>Price</th>
+                <th>Daily %</th>
+                <th>Trend</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let w of watchlist">
+                <td>
+                  <div class="fw-semibold apex-cell-title">{{ w.asset }}</div>
+                  <div class="apex-muted small">{{ w.symbol }}</div>
+                </td>
+                <td class="apex-mono">{{ w.price }}</td>
+                <td>
+                  <span [ngClass]="w.direction === 'up' ? 'text-success' : 'text-danger'">{{ w.change }}</span>
+                </td>
+                <td>
+                  <i class="bi apex-trend-icon"
+                    [ngClass]="w.direction === 'up' ? 'bi-graph-up-arrow text-success' : 'bi-graph-down-arrow text-danger'"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upcoming Events -->
+    <div class="col-12 col-lg-6">
+      <div class="apex-card h-100">
+        <h2 class="apex-card-title mb-3">Upcoming Events</h2>
+        <div class="apex-event-list">
+          <div class="apex-event-item" *ngFor="let e of upcomingEvents">
+            <div class="apex-event-date">
+              <span class="apex-event-day">{{ e.date }}</span>
+              <span class="apex-event-month">{{ e.month }}</span>
+            </div>
+            <div class="flex-grow-1">
+              <div class="apex-cell-title fw-semibold">{{ e.event }}</div>
+              <span class="badge apex-badge-{{ e.categoryVariant }}">{{ e.category }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================================================================
+       QUICK ACTIONS  +  SYSTEM STATUS
+       ================================================================== -->
+  <div class="row g-3">
+
+    <!-- Quick Actions -->
+    <div class="col-12 col-lg-7">
+      <div class="apex-card h-100">
+        <h2 class="apex-card-title mb-3">Quick Actions</h2>
+        <div class="row g-2">
+          <div class="col-6 col-md-4" *ngFor="let action of quickActions">
+            <button type="button" class="apex-action-btn w-100">
+              <i class="bi" [ngClass]="action.icon"></i>
+              <span>{{ action.label }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- System Status -->
+    <div class="col-12 col-lg-5">
+      <div class="apex-card h-100">
+        <h2 class="apex-card-title mb-3">System Status</h2>
+        <div class="apex-status-list">
+          <div class="apex-status-row" *ngFor="let s of systemStatus">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi" [ngClass]="s.icon"></i>
+              <span class="apex-cell-title">{{ s.label }}</span>
+            </div>
+            <span class="badge apex-badge-success">
+              <i class="bi bi-check-circle-fill me-1"></i>{{ s.status }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

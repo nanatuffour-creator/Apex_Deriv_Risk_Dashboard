@@ -1,0 +1,222 @@
+.register-container {
+
+    display: flex;
+    min-height: 100vh;
+    background: #0f172a;
+    color: white;
+
+}
+
+.left-panel {
+
+    width: 45%;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+}
+
+.back-home {
+
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.back-home:hover {
+
+    color: #3b82f6;
+
+}
+
+.branding h1 {
+
+    font-size: 56px;
+    font-weight: 700;
+
+}
+
+.branding h2 {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.branding p {
+
+    color: #cbd5e1;
+    line-height: 1.8;
+
+}
+
+.feature-list {
+
+    margin-top: 40px;
+    list-style: none;
+    padding: 0;
+
+}
+
+.feature-list li {
+
+    margin-bottom: 18px;
+    font-size: 18px;
+
+}
+
+.feature-list i {
+
+    color: #22c55e;
+    margin-right: 10px;
+
+}
+
+.right-panel {
+
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #020617;
+
+}
+
+.register-card {
+
+    width: 650px;
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 45px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .4);
+
+}
+
+.register-card p {
+
+    color: #94a3b8;
+    margin-bottom: 30px;
+
+}
+
+.form-control,
+.form-select {
+
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: white;
+
+}
+
+.form-control:focus,
+.form-select:focus {
+
+    background: #0f172a;
+    color: white;
+    border-color: #2563eb;
+    box-shadow: none;
+
+}
+
+.form-select option {
+
+    color: black;
+
+}
+
+.btn-primary {
+
+    background: #2563eb;
+    border: none;
+    height: 50px;
+    font-weight: 600;
+
+}
+
+.btn-primary:hover {
+
+    background: #1d4ed8;
+
+}
+
+.server-error {
+
+    background: rgba(248, 113, 113, 0.15);
+
+    border: 1px solid rgba(248, 113, 113, 0.35);
+
+    color: #fecaca;
+
+    border-radius: 10px;
+
+    padding: 12px 14px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+.field-error {
+
+    color: #fda4af;
+
+    font-size: 0.9rem;
+
+    margin-top: 6px;
+
+}
+
+.is-invalid {
+
+    border-color: #f87171 !important;
+
+}
+
+a {
+
+    color: #60a5fa;
+    text-decoration: none;
+
+}
+
+a:hover {
+
+    color: white;
+
+}
+
+@media(max-width:992px) {
+
+    .register-container {
+
+        flex-direction: column;
+
+    }
+
+    .left-panel,
+    .right-panel {
+
+        width: 100%;
+
+    }
+
+    .register-card {
+
+        width: 95%;
+        margin: 40px auto;
+
+    }
+
+}

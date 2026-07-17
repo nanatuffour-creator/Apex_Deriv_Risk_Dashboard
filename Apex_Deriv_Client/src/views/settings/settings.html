@@ -1,0 +1,180 @@
+<div class="settings-dashboard py-4 px-3">
+
+    <!-- PAGE HEADER -->
+    <div class="row mb-4 align-items-center g-3">
+        <div class="col-lg-6">
+            <h2 class="text-accent fw-bold mb-1">Settings</h2>
+            <p class="text-muted mb-0">Manage your account, preferences, security and application settings.</p>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-lg-end gap-2">
+            <button class="btn btn-outline-accent fw-medium px-4">Reset Defaults</button>
+            <button class="btn btn-accent fw-medium px-4"><i class="bi bi-check-lg me-1"></i> Save Changes</button>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <!-- LEFT COLUMN -->
+        <div class="col-xl-6">
+            <!-- Profile Settings -->
+            <div class="card dashboard-card mb-4">
+                <div class="card-header bg-white border-0 pt-4 px-4">
+                    <h5 class="fw-bold text-accent">Profile</h5>
+                </div>
+                <div class="card-body px-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-light rounded-circle p-4 me-3"><i class="bi bi-person-fill fs-2 text-muted"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-0">Alexander J. Sterling</h5>
+                            <p class="text-muted small">Senior Risk Analyst | ApexDeriv Institutional</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-6"><label
+                                class="small text-muted d-block">Email</label><span>a.sterling@apexderiv.com</span>
+                        </div>
+                        <div class="col-6"><label class="small text-muted d-block">Department</label><span>Derivatives
+                                Trading</span></div>
+                    </div>
+                    <button class="btn btn-sm btn-outline-secondary me-2">Edit Profile</button>
+                    <button class="btn btn-sm btn-outline-secondary">Change Password</button>
+                </div>
+            </div>
+
+            <!-- Application Preferences -->
+            <div class="card dashboard-card mb-4">
+                <div class="card-header bg-white border-0 pt-4 px-4">
+                    <h5 class="fw-bold text-accent">Preferences</h5>
+                </div>
+                <div class="card-body px-4">
+                    <div class="row g-3">
+                        <div class="col-6"><label class="small fw-semibold">Theme</label><select
+                                class="form-select form-select-sm">
+                                <option>System Default</option>
+                            </select></div>
+                        <div class="col-6"><label class="small fw-semibold">Currency</label><select
+                                class="form-select form-select-sm">
+                                <option>USD</option>
+                            </select></div>
+                        <div class="col-6"><label class="small fw-semibold">Language</label><select
+                                class="form-select form-select-sm">
+                                <option>English</option>
+                            </select></div>
+                        <div class="col-6"><label class="small fw-semibold">Date Format</label><select
+                                class="form-select form-select-sm">
+                                <option>DD/MM/YYYY</option>
+                            </select></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API Configuration -->
+            <div class="card dashboard-card mb-4">
+                <div class="card-header bg-white border-0 pt-4 px-4 d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold text-accent">API Configuration</h5>
+                    <span class="badge bg-success-subtle text-success">Connected</span>
+                </div>
+                <div class="card-body px-4">
+                    <label class="small text-muted">Market Data Provider</label>
+                    <p class="fw-medium">Bloomberg B-Pipe Integration</p>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" value="API_KEY_HIDDEN_12345" disabled>
+                        <button class="btn btn-outline-secondary">Regenerate</button>
+                    </div>
+                    <button class="btn btn-sm btn-outline-primary">Test Connection</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-xl-6">
+            <!-- Security Settings -->
+            <div class="card dashboard-card mb-4">
+                <div class="card-header bg-white border-0 pt-4 px-4">
+                    <h5 class="fw-bold text-accent">Security</h5>
+                </div>
+                <div class="card-body px-4">
+                    <div class="d-flex justify-content-between mb-3"><span>Two-Factor Authentication</span><button
+                            class="btn btn-sm btn-primary">Enable 2FA</button></div>
+                    <div class="d-flex justify-content-between mb-3"><span>Active Sessions</span><span>3 Active
+                            Devices</span></div>
+                    <div class="d-flex justify-content-between mb-3"><span>Last Password Change</span><span>24 days
+                            ago</span></div>
+                    <button class="btn btn-sm btn-outline-danger">Logout From All Devices</button>
+                </div>
+            </div>
+
+            <!-- Notifications -->
+            <div class="card dashboard-card mb-4">
+                <div class="card-header bg-white border-0 pt-4 px-4">
+                    <h5 class="fw-bold text-accent">Notifications</h5>
+                </div>
+                <div class="card-body px-4">
+                    <div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox"
+                            checked><label class="form-check-label">Daily Portfolio Summary</label></div>
+                    <div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox"
+                            checked><label class="form-check-label">Weekly Risk Reports</label></div>
+                    <div class="form-check form-switch mb-2"><input class="form-check-input" type="checkbox"><label
+                            class="form-check-label">Market Alerts</label></div>
+                </div>
+            </div>
+
+            <!-- Help & Support -->
+            <div class="card dashboard-card">
+                <div class="card-body px-4 py-3 d-flex gap-2">
+                    <button class="btn btn-sm btn-light border">Documentation</button>
+                    <button class="btn btn-sm btn-light border">Contact Support</button>
+                    <button class="btn btn-sm btn-light border">About</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUDIT LOG TABLE -->
+    <div class="card dashboard-card mt-4">
+        <div class="card-header bg-white border-0 pt-4 px-4">
+            <h5 class="fw-bold text-accent">Audit Log</h5>
+        </div>
+        <div class="card-body px-4 pb-4">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>User</th>
+                            <th>Action</th>
+                            <th>IP Address</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2026-07-15 14:00</td>
+                            <td>Admin</td>
+                            <td>Portfolio Export</td>
+                            <td>192.168.1.1</td>
+                            <td><span class="text-success">Success</span></td>
+                        </tr>
+                        <tr>
+                            <td>2026-07-15 09:30</td>
+                            <td>Admin</td>
+                            <td>Password Change</td>
+                            <td>192.168.1.1</td>
+                            <td><span class="text-success">Success</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- DANGER ZONE -->
+    <div class="card mt-4 border-danger">
+        <div class="card-body p-4">
+            <h5 class="text-danger fw-bold"><i class="bi bi-exclamation-triangle-fill"></i> Danger Zone</h5>
+            <p class="text-muted small">Irreversible actions for your account.</p>
+            <button class="btn btn-outline-danger btn-sm me-2">Clear All Data</button>
+            <button class="btn btn-danger btn-sm">Delete Account</button>
+        </div>
+    </div>
+</div>

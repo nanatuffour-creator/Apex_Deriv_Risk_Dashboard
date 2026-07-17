@@ -1,0 +1,690 @@
+<div class="risk-dashboard py-4 px-3">
+
+    <div class="row mb-4 align-items-center g-3">
+        <div class="col-xl-6 col-lg-5">
+            <h2 class="text-accent fw-bold mb-1">Risk Analysis</h2>
+            <p class="text-muted mb-0">Analyze portfolio exposure, market risk, volatility and derivative sensitivities.
+            </p>
+        </div>
+        <div class="col-xl-6 col-lg-7 d-flex flex-wrap justify-content-lg-end gap-2 align-items-center">
+            <div class="input-group input-group-sm w-auto me-2">
+                <span class="input-group-text bg-white border-secondary-subtle"><i
+                        class="bi bi-calendar3 text-muted"></i></span>
+                <select class="form-select border-secondary-subtle shadow-none text-muted">
+                    <option>Last 30 Days</option>
+                    <option>Year to Date</option>
+                    <option>1 Year</option>
+                    <option>Custom Range</option>
+                </select>
+            </div>
+            <button class="btn btn-outline-accent fw-medium btn-sm px-3 py-2">
+                <i class="bi bi-file-earmark-arrow-down me-1"></i> Export Report
+            </button>
+            <button class="btn btn-accent fw-medium btn-sm px-3 py-2">
+                <i class="bi bi-play-fill me-1"></i> Run Analysis
+            </button>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-6 g-3 mb-4">
+        <div class="col">
+            <div class="card dashboard-card h-100">
+                <div class="card-body p-3 d-flex align-items-center">
+                    <div class="icon-box bg-light text-accent rounded-3 me-3">
+                        <i class="bi bi-wallet2 fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted small fw-semibold mb-1">Portfolio Value</h6>
+                        <h4 class="fw-bold text-accent mb-0">$8,450,000</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dashboard-card h-100">
+                <div class="card-body p-3 d-flex align-items-center">
+                    <div class="icon-box bg-danger bg-opacity-10 text-danger rounded-3 me-3">
+                        <i class="bi bi-shield-check fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted small fw-semibold mb-1">Portfolio VaR (95%)</h6>
+                        <h4 class="fw-bold text-danger mb-0">$145,200</h4>
+                        <span class="text-muted" style="font-size: 0.65rem;">1 Day Value at Risk</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dashboard-card h-100">
+                <div class="card-body p-3 d-flex align-items-center">
+                    <div class="icon-box bg-light text-accent rounded-3 me-3">
+                        <i class="bi bi-graph-up-arrow fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted small fw-semibold mb-1">Portfolio Beta</h6>
+                        <h4 class="fw-bold text-accent mb-0">1.18</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dashboard-card h-100">
+                <div class="card-body p-3 d-flex align-items-center">
+                    <div class="icon-box bg-light text-accent rounded-3 me-3">
+                        <i class="bi bi-activity fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted small fw-semibold mb-1">Portfolio Volatility</h6>
+                        <h4 class="fw-bold text-accent mb-0">16.7%</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dashboard-card h-100 border-start border-success border-4">
+                <div class="card-body p-3 d-flex align-items-center">
+                    <div class="icon-box bg-success bg-opacity-10 text-success rounded-3 me-3">
+                        <i class="bi bi-bar-chart fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted small fw-semibold mb-1">Sharpe Ratio</h6>
+                        <h4 class="fw-bold text-success mb-0">1.72</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dashboard-card h-100">
+                <div class="card-body p-3 d-flex align-items-center">
+                    <div class="icon-box bg-warning bg-opacity-10 text-warning rounded-3 me-3">
+                        <i class="bi bi-exclamation-triangle fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted small fw-semibold mb-1">Risk Level</h6>
+                        <span class="badge bg-warning text-dark fw-bold px-2 py-1">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-xl-8">
+            <div class="card dashboard-card h-100">
+                <div
+                    class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2 d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold text-accent mb-0">Value at Risk (VaR)</h5>
+                    <button class="btn btn-sm btn-link text-muted text-decoration-none p-0"><i
+                            class="bi bi-three-dots-vertical"></i></button>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2 d-flex flex-column">
+                    <div class="chart-placeholder flex-grow-1 mb-4" style="min-height: 250px;">
+                        <i class="bi bi-bar-chart-line fs-2 mb-2"></i>
+                        <span>Historical VaR chart will be displayed here.</span>
+                    </div>
+                    <div class="row g-3 text-center border-top pt-3">
+                        <div class="col">
+                            <span class="d-block text-muted small fw-medium mb-1">95% Confidence</span>
+                            <span class="fw-bold text-accent fs-6">$145,200</span>
+                        </div>
+                        <div class="col border-start">
+                            <span class="d-block text-muted small fw-medium mb-1">99% Confidence</span>
+                            <span class="fw-bold text-danger fs-6">$210,500</span>
+                        </div>
+                        <div class="col border-start">
+                            <span class="d-block text-muted small fw-medium mb-1">1 Day VaR</span>
+                            <span class="fw-bold text-accent fs-6">$145,200</span>
+                        </div>
+                        <div class="col border-start">
+                            <span class="d-block text-muted small fw-medium mb-1">10 Day VaR</span>
+                            <span class="fw-bold text-accent fs-6">$459,165</span>
+                        </div>
+                        <div class="col border-start">
+                            <span class="d-block text-muted small fw-medium mb-1">Expected Shortfall</span>
+                            <span class="fw-bold text-danger fs-6">$182,300</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Portfolio Risk Exposure</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2">
+                    <div class="exposure-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="small fw-semibold text-accent">Equities</span>
+                            <span class="small text-muted fw-bold">42%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-primary" style="width: 42%;"></div>
+                        </div>
+                    </div>
+                    <div class="exposure-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="small fw-semibold text-accent">Bonds</span>
+                            <span class="small text-muted fw-bold">25%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                    <div class="exposure-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="small fw-semibold text-accent">Derivatives</span>
+                            <span class="small text-muted fw-bold">15%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-danger" style="width: 15%;"></div>
+                        </div>
+                    </div>
+                    <div class="exposure-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="small fw-semibold text-accent">Commodities</span>
+                            <span class="small text-muted fw-bold">10%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-warning" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                    <div class="exposure-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="small fw-semibold text-accent">Forex</span>
+                            <span class="small text-muted fw-bold">5%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-success" style="width: 5%;"></div>
+                        </div>
+                    </div>
+                    <div class="exposure-item mb-0">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="small fw-semibold text-accent">Crypto</span>
+                            <span class="small text-muted fw-bold">3%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-secondary" style="width: 3%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card dashboard-card">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Risk by Asset Class</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-custom align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Asset Class</th>
+                                    <th class="text-end">Market Value</th>
+                                    <th class="text-end">Risk Contribution</th>
+                                    <th class="text-end">Volatility</th>
+                                    <th class="text-center">Beta</th>
+                                    <th class="text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold text-accent"><i
+                                            class="bi bi-building me-2 text-primary"></i>Equities</td>
+                                    <td class="text-end fw-medium">$3,549,000</td>
+                                    <td class="text-end text-danger fw-semibold">55.2%</td>
+                                    <td class="text-end">18.5%</td>
+                                    <td class="text-center">1.25</td>
+                                    <td class="text-center"><span class="badge bg-danger bg-opacity-10 text-danger">High
+                                            Risk</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold text-accent"><i
+                                            class="bi bi-file-earmark-text me-2 text-info"></i>Bonds</td>
+                                    <td class="text-end fw-medium">$2,112,500</td>
+                                    <td class="text-end text-muted fw-semibold">8.4%</td>
+                                    <td class="text-end">4.2%</td>
+                                    <td class="text-center">0.15</td>
+                                    <td class="text-center"><span
+                                            class="badge bg-success bg-opacity-10 text-success">Low Risk</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold text-accent"><i
+                                            class="bi bi-box me-2 text-warning"></i>Commodities</td>
+                                    <td class="text-end fw-medium">$845,000</td>
+                                    <td class="text-end text-warning fw-semibold">12.1%</td>
+                                    <td class="text-end">22.4%</td>
+                                    <td class="text-center">0.85</td>
+                                    <td class="text-center"><span
+                                            class="badge bg-warning bg-opacity-10 text-dark">Medium Risk</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold text-accent"><i
+                                            class="bi bi-currency-exchange me-2 text-success"></i>Forex</td>
+                                    <td class="text-end fw-medium">$422,500</td>
+                                    <td class="text-end text-muted fw-semibold">6.3%</td>
+                                    <td class="text-end">9.1%</td>
+                                    <td class="text-center">-0.10</td>
+                                    <td class="text-center"><span
+                                            class="badge bg-success bg-opacity-10 text-success">Low Risk</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold text-accent"><i
+                                            class="bi bi-pie-chart me-2 text-secondary"></i>ETFs</td>
+                                    <td class="text-end fw-medium">$1,267,500</td>
+                                    <td class="text-end text-warning fw-semibold">10.5%</td>
+                                    <td class="text-end">14.2%</td>
+                                    <td class="text-center">1.02</td>
+                                    <td class="text-center"><span
+                                            class="badge bg-warning bg-opacity-10 text-dark">Medium Risk</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold text-accent"><i
+                                            class="bi bi-currency-bitcoin me-2 text-danger"></i>Crypto</td>
+                                    <td class="text-end fw-medium">$253,500</td>
+                                    <td class="text-end text-danger fw-semibold">7.5%</td>
+                                    <td class="text-end">65.8%</td>
+                                    <td class="text-center">2.40</td>
+                                    <td class="text-center"><span
+                                            class="badge bg-danger bg-opacity-10 text-danger">Extreme Risk</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-xl-6">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Aggregate Derivative Greeks</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2 d-flex flex-column">
+                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-5 g-2 mb-4">
+                        <div class="col">
+                            <div class="p-2 border rounded text-center h-100 bg-light">
+                                <span class="d-block small text-muted mb-1 fw-bold">Delta (Δ)</span>
+                                <span class="fs-6 fw-bold text-accent">0.45</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-2 border rounded text-center h-100 bg-light">
+                                <span class="d-block small text-muted mb-1 fw-bold">Gamma (Γ)</span>
+                                <span class="fs-6 fw-bold text-accent">0.12</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-2 border rounded text-center h-100 bg-light">
+                                <span class="d-block small text-muted mb-1 fw-bold">Vega (ν)</span>
+                                <span class="fs-6 fw-bold text-accent">1.84</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-2 border rounded text-center h-100 bg-light">
+                                <span class="d-block small text-muted mb-1 fw-bold">Theta (Θ)</span>
+                                <span class="fs-6 fw-bold text-danger">-0.22</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-2 border rounded text-center h-100 bg-light">
+                                <span class="d-block small text-muted mb-1 fw-bold">Rho (ρ)</span>
+                                <span class="fs-6 fw-bold text-accent">0.05</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-placeholder flex-grow-1" style="min-height: 200px;">
+                        <i class="bi bi-bezier fs-3 mb-2"></i>
+                        <span>Greeks visualization chart will be displayed here.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-6">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Portfolio Correlation Matrix</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2 d-flex flex-column">
+                    <div class="chart-placeholder flex-grow-1" style="min-height: 280px;">
+                        <i class="bi bi-grid-3x3 fs-1 mb-3 text-secondary opacity-50"></i>
+                        <span class="fw-medium">Correlation heatmap will be displayed here.</span>
+                        <small class="text-muted mt-2 d-block px-4">Displays asset class interdependencies and
+                            cross-asset correlation metrics to identify diversification gaps.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-xl-7">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Stress Test Results</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-custom align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Scenario</th>
+                                    <th class="text-end">Portfolio Loss</th>
+                                    <th class="text-center">Risk Rating</th>
+                                    <th class="text-center">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-medium text-accent">Stock Market Crash (-20%)</td>
+                                    <td class="text-end fw-bold text-danger">-$1,450,000</td>
+                                    <td class="text-center"><span class="badge bg-danger text-white">Severe</span></td>
+                                    <td class="text-center"><i class="bi bi-x-circle-fill text-danger"></i> Fail</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium text-accent">Interest Rate Increase (+2%)</td>
+                                    <td class="text-end fw-bold text-warning">-$320,000</td>
+                                    <td class="text-center"><span class="badge bg-warning text-dark">Moderate</span>
+                                    </td>
+                                    <td class="text-center"><i class="bi bi-exclamation-circle-fill text-warning"></i>
+                                        Watch</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium text-accent">Oil Price Shock (+15%)</td>
+                                    <td class="text-end fw-bold text-success">+$85,000</td>
+                                    <td class="text-center"><span class="badge bg-success text-white">Low</span></td>
+                                    <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i> Pass
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium text-accent">Gold Price Decline (-10%)</td>
+                                    <td class="text-end fw-bold text-warning">-$145,000</td>
+                                    <td class="text-center"><span class="badge bg-warning text-dark">Moderate</span>
+                                    </td>
+                                    <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i> Pass
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium text-accent">USD Appreciation (+5%)</td>
+                                    <td class="text-end fw-bold text-success">+$42,000</td>
+                                    <td class="text-center"><span class="badge bg-success text-white">Low</span></td>
+                                    <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i> Pass
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium text-accent">Crypto Market Crash (-35%)</td>
+                                    <td class="text-end fw-bold text-danger">-$88,000</td>
+                                    <td class="text-center"><span class="badge bg-danger text-white">High</span></td>
+                                    <td class="text-center"><i class="bi bi-exclamation-circle-fill text-warning"></i>
+                                        Watch</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-5">
+            <div class="card dashboard-card h-100">
+                <div
+                    class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2 d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold text-accent mb-0">Scenario Analysis</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2 d-flex flex-column">
+                    <select class="form-select border-secondary-subtle shadow-none mb-3">
+                        <option selected>Select Scenario: Recession</option>
+                        <option value="bull">Bull Market</option>
+                        <option value="bear">Bear Market</option>
+                        <option value="inflation">High Inflation</option>
+                        <option value="hike">Interest Rate Hike</option>
+                        <option value="currency">Currency Crisis</option>
+                    </select>
+
+                    <div class="bg-light rounded p-3 mb-3">
+                        <div class="row text-center g-2">
+                            <div class="col-6 border-end">
+                                <span class="d-block small text-muted mb-1">Expected Portfolio Value</span>
+                                <span class="fw-bold fs-5 text-accent">$7,605,000</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="d-block small text-muted mb-1">Expected P/L</span>
+                                <span class="fw-bold fs-5 text-danger">-$845,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 d-flex justify-content-between align-items-center px-2">
+                        <span class="fw-medium text-accent">Scenario Risk Score</span>
+                        <span class="badge bg-danger text-white px-3 py-2 fs-6">82 / 100</span>
+                    </div>
+
+                    <div class="chart-placeholder flex-grow-1 mt-2" style="min-height: 120px;">
+                        <i class="bi bi-graph-down fs-4 mb-2"></i>
+                        <span class="small">Scenario projection chart will be displayed here.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-xl-8">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Top Risky Positions</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-custom align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Asset</th>
+                                    <th class="text-end">Exposure</th>
+                                    <th class="text-end">VaR Contribution</th>
+                                    <th class="text-end">Volatility</th>
+                                    <th class="text-center">Risk Level</th>
+                                    <th class="text-end">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold text-accent">Tesla (TSLA)</td>
+                                    <td class="text-end fw-medium">$450,000</td>
+                                    <td class="text-end text-danger">$38,000</td>
+                                    <td class="text-end">45.2%</td>
+                                    <td class="text-center"><span
+                                            class="badge bg-danger bg-opacity-10 text-danger">High</span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary py-0 px-2">Hedge</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold text-accent">Bitcoin ETF (IBIT)</td>
+                                    <td class="text-end fw-medium">$180,000</td>
+                                    <td class="text-end text-danger">$42,500</td>
+                                    <td class="text-end">65.8%</td>
+                                    <td class="text-center"><span
+                                            class="badge bg-danger bg-opacity-10 text-danger">High</span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary py-0 px-2">Hedge</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold text-accent">EUR/USD Forward</td>
+                                    <td class="text-end fw-medium">$1,200,000</td>
+                                    <td class="text-end text-warning">$18,200</td>
+                                    <td class="text-end">12.1%</td>
+                                    <td class="text-center"><span
+                                            class="badge bg-warning bg-opacity-10 text-dark">Medium</span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary py-0 px-2">Hedge</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold text-accent">Gold Futures</td>
+                                    <td class="text-end fw-medium">$350,000</td>
+                                    <td class="text-end text-warning">$15,400</td>
+                                    <td class="text-end">18.4%</td>
+                                    <td class="text-center"><span
+                                            class="badge bg-warning bg-opacity-10 text-dark">Medium</span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary py-0 px-2">Hedge</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold text-accent">Apple Options (Calls)</td>
+                                    <td class="text-end fw-medium">$85,000</td>
+                                    <td class="text-end text-danger">$22,100</td>
+                                    <td class="text-end">55.0%</td>
+                                    <td class="text-center"><span
+                                            class="badge bg-danger bg-opacity-10 text-danger">High</span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary py-0 px-2">Hedge</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Risk Alerts</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2 overflow-auto" style="max-height: 350px;">
+                    <div
+                        class="alert alert-danger border-0 shadow-sm d-flex align-items-start py-2 px-3 mb-2 rounded-3">
+                        <i class="bi bi-exclamation-octagon-fill text-danger fs-5 me-2 mt-1"></i>
+                        <div>
+                            <strong class="d-block small text-dark">Concentration Risk</strong>
+                            <span class="small text-muted">High exposure to Technology sector (45%).</span>
+                        </div>
+                    </div>
+                    <div
+                        class="alert alert-warning border-0 shadow-sm d-flex align-items-start py-2 px-3 mb-2 rounded-3">
+                        <i class="bi bi-exclamation-triangle-fill text-warning fs-5 me-2 mt-1"></i>
+                        <div>
+                            <strong class="d-block small text-dark">Volatility Alert</strong>
+                            <span class="small text-muted">Bitcoin volatility exceeds 60% threshold.</span>
+                        </div>
+                    </div>
+                    <div class="alert alert-info border-0 shadow-sm d-flex align-items-start py-2 px-3 mb-2 rounded-3">
+                        <i class="bi bi-info-circle-fill text-info fs-5 me-2 mt-1"></i>
+                        <div>
+                            <strong class="d-block small text-dark">Contract Expiry</strong>
+                            <span class="small text-muted">Gold Futures (FUT-GLD) nearing expiry (3 days).</span>
+                        </div>
+                    </div>
+                    <div
+                        class="alert alert-warning border-0 shadow-sm d-flex align-items-start py-2 px-3 mb-2 rounded-3">
+                        <i class="bi bi-exclamation-triangle-fill text-warning fs-5 me-2 mt-1"></i>
+                        <div>
+                            <strong class="d-block small text-dark">Beta Target Exceeded</strong>
+                            <span class="small text-muted">Portfolio Beta (1.18) above 1.10 target.</span>
+                        </div>
+                    </div>
+                    <div
+                        class="alert alert-danger border-0 shadow-sm d-flex align-items-start py-2 px-3 mb-0 rounded-3">
+                        <i class="bi bi-cash-stack text-danger fs-5 me-2 mt-1"></i>
+                        <div>
+                            <strong class="d-block small text-dark">Margin Call Risk</strong>
+                            <span class="small text-muted">Margin requirement increased by 12% today.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-xl-8">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Portfolio Risk Trend</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2 d-flex flex-column">
+                    <div class="chart-placeholder flex-grow-1" style="min-height: 250px;">
+                        <i class="bi bi-graph-up fs-2 mb-2"></i>
+                        <span>Risk trend chart (Line Chart) will be displayed here.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Recent Activity</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-3">
+                    <div class="custom-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon text-success"><i class="bi bi-check-circle-fill"></i></div>
+                            <div class="timeline-content">
+                                <p class="mb-0 fw-medium text-accent small">Risk calculation completed</p>
+                                <small class="text-muted" style="font-size: 0.7rem;">Today, 08:30 AM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon text-primary"><i class="bi bi-lightning-fill"></i></div>
+                            <div class="timeline-content">
+                                <p class="mb-0 fw-medium text-accent small">Stress test executed (Market Crash)</p>
+                                <small class="text-muted" style="font-size: 0.7rem;">Yesterday, 14:15 PM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon text-warning"><i class="bi bi-arrow-repeat"></i></div>
+                            <div class="timeline-content">
+                                <p class="mb-0 fw-medium text-accent small">Portfolio rebalanced (Delta Neutral)</p>
+                                <small class="text-muted" style="font-size: 0.7rem;">Oct 12, 09:00 AM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon text-info"><i class="bi bi-arrow-up-right-circle-fill"></i></div>
+                            <div class="timeline-content">
+                                <p class="mb-0 fw-medium text-accent small">VaR updated (99% Confidence)</p>
+                                <small class="text-muted" style="font-size: 0.7rem;">Oct 10, 16:45 PM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon text-secondary"><i class="bi bi-calculator-fill"></i></div>
+                            <div class="timeline-content border-0 pb-0">
+                                <p class="mb-0 fw-medium text-accent small">Derivative exposure recalculated</p>
+                                <small class="text-muted" style="font-size: 0.7rem;">Oct 08, 10:20 AM</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card dashboard-card">
+                <div class="card-body p-4 d-flex flex-wrap justify-content-center gap-3">
+                    <button class="btn btn-outline-accent d-flex align-items-center gap-2 px-4 py-2">
+                        <i class="bi bi-file-earmark-pdf fs-5 text-danger"></i>
+                        <span class="fw-medium">Download PDF Report</span>
+                    </button>
+                    <button class="btn btn-outline-accent d-flex align-items-center gap-2 px-4 py-2">
+                        <i class="bi bi-file-earmark-excel fs-5 text-success"></i>
+                        <span class="fw-medium">Download Excel Report</span>
+                    </button>
+                    <button class="btn btn-accent d-flex align-items-center gap-2 px-4 py-2">
+                        <i class="bi bi-printer fs-5"></i>
+                        <span class="fw-medium">Print Risk Report</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

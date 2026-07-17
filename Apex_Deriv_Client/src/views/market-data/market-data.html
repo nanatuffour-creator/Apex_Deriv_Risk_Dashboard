@@ -1,0 +1,629 @@
+<div class="market-dashboard px-3 py-4">
+    <div class="row mb-4 align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+            <h2 class="text-accent fw-bold mb-1">Market Data</h2>
+            <p class="text-muted mb-0">Monitor live and simulated financial market information across multiple asset
+                classes.</p>
+        </div>
+        <div class="col-md-6 d-flex justify-content-md-end align-items-center gap-3">
+            <span class="text-muted small"><i class="bi bi-clock me-1"></i> Last Updated: Jul 15, 2026, 14:30 GMT</span>
+            <span
+                class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill">
+                <i class="bi bi-record-circle-fill me-1"></i> Market Open
+            </span>
+            <button class="btn btn-outline-accent rounded-circle p-2 lh-1" title="Refresh">
+                <i class="bi bi-arrow-clockwise"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="row mb-4 g-3">
+        <div class="col-lg-5 col-md-12">
+            <div class="input-group search-bar">
+                <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control border-start-0 ps-0 shadow-none"
+                    placeholder="Search stocks, forex, commodities...">
+            </div>
+        </div>
+        <div class="col-lg-7 col-md-12 d-flex flex-wrap gap-2 justify-content-lg-end">
+            <select class="form-select filter-select w-auto shadow-none">
+                <option selected>Asset Class</option>
+                <option value="1">Equities</option>
+                <option value="2">Forex</option>
+                <option value="3">Commodities</option>
+            </select>
+            <select class="form-select filter-select w-auto shadow-none">
+                <option selected>Region</option>
+                <option value="1">North America</option>
+                <option value="2">Europe</option>
+                <option value="3">Africa</option>
+            </select>
+            <select class="form-select filter-select w-auto shadow-none">
+                <option selected>Exchange</option>
+                <option value="1">NYSE</option>
+                <option value="2">NASDAQ</option>
+                <option value="3">LSE</option>
+            </select>
+            <select class="form-select filter-select w-auto shadow-none">
+                <option selected>Time Interval</option>
+                <option value="1">1D</option>
+                <option value="2">1W</option>
+                <option value="3">1M</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-4 g-3">
+        <div class="col-xl col-md-4 col-sm-6">
+            <div class="card market-card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h6 class="text-muted mb-0">S&P 500</h6>
+                        <i class="bi bi-graph-up-arrow text-gain"></i>
+                    </div>
+                    <h4 class="fw-bold mb-1 text-accent">6,342.45</h4>
+                    <span class="text-gain fw-medium small"><i class="bi bi-caret-up-fill"></i> +1.24%</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl col-md-4 col-sm-6">
+            <div class="card market-card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h6 class="text-muted mb-0">NASDAQ</h6>
+                        <i class="bi bi-graph-up-arrow text-gain"></i>
+                    </div>
+                    <h4 class="fw-bold mb-1 text-accent">21,452.87</h4>
+                    <span class="text-gain fw-medium small"><i class="bi bi-caret-up-fill"></i> +0.87%</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl col-md-4 col-sm-6">
+            <div class="card market-card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h6 class="text-muted mb-0">FTSE 100</h6>
+                        <i class="bi bi-graph-down-arrow text-loss"></i>
+                    </div>
+                    <h4 class="fw-bold mb-1 text-accent">8,445.62</h4>
+                    <span class="text-loss fw-medium small"><i class="bi bi-caret-down-fill"></i> -0.42%</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl col-md-6 col-sm-6">
+            <div class="card market-card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h6 class="text-muted mb-0">Gold</h6>
+                        <i class="bi bi-circle-half text-warning"></i>
+                    </div>
+                    <h4 class="fw-bold mb-1 text-accent">$3,421.80 <span class="fs-6 text-muted fw-normal">/ oz</span>
+                    </h4>
+                    <span class="text-gain fw-medium small"><i class="bi bi-caret-up-fill"></i> +0.55%</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl col-md-6 col-sm-12">
+            <div class="card market-card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-2">
+                        <h6 class="text-muted mb-0">Bitcoin</h6>
+                        <i class="bi bi-currency-bitcoin text-warning fs-5 lh-1"></i>
+                    </div>
+                    <h4 class="fw-bold mb-1 text-accent">$118,250</h4>
+                    <span class="text-gain fw-medium small"><i class="bi bi-caret-up-fill"></i> +2.91%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-xl-8 col-lg-7">
+
+            <div class="card market-card mb-4">
+                <div
+                    class="card-header bg-white border-bottom-0 pt-4 pb-2 px-4 d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold text-accent mb-0">Equities</h5>
+                    <button class="btn btn-sm btn-link text-decoration-none">View All</button>
+                </div>
+                <div class="card-body px-4 pb-4">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-custom align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Ticker</th>
+                                    <th>Company</th>
+                                    <th>Exchange</th>
+                                    <th class="text-end">Price</th>
+                                    <th class="text-end">Daily Change</th>
+                                    <th class="text-end">Volume</th>
+                                    <th class="text-end">Market Cap</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">AAPL</td>
+                                    <td class="text-muted">Apple</td>
+                                    <td><span class="badge bg-light text-dark border">NASDAQ</span></td>
+                                    <td class="text-end fw-medium">$235.10</td>
+                                    <td class="text-end text-gain">+1.15%</td>
+                                    <td class="text-end text-muted">45.2M</td>
+                                    <td class="text-end text-muted">3.6T</td>
+                                    <td><span class="status-dot bg-success"></span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">MSFT</td>
+                                    <td class="text-muted">Microsoft</td>
+                                    <td><span class="badge bg-light text-dark border">NASDAQ</span></td>
+                                    <td class="text-end fw-medium">$450.25</td>
+                                    <td class="text-end text-loss">-0.32%</td>
+                                    <td class="text-end text-muted">22.1M</td>
+                                    <td class="text-end text-muted">3.4T</td>
+                                    <td><span class="status-dot bg-success"></span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">NVDA</td>
+                                    <td class="text-muted">NVIDIA</td>
+                                    <td><span class="badge bg-light text-dark border">NASDAQ</span></td>
+                                    <td class="text-end fw-medium">$132.80</td>
+                                    <td class="text-end text-gain">+4.20%</td>
+                                    <td class="text-end text-muted">98.5M</td>
+                                    <td class="text-end text-muted">3.2T</td>
+                                    <td><span class="status-dot bg-success"></span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">TSLA</td>
+                                    <td class="text-muted">Tesla</td>
+                                    <td><span class="badge bg-light text-dark border">NASDAQ</span></td>
+                                    <td class="text-end fw-medium">$285.60</td>
+                                    <td class="text-end text-gain">+2.10%</td>
+                                    <td class="text-end text-muted">85.4M</td>
+                                    <td class="text-end text-muted">890B</td>
+                                    <td><span class="status-dot bg-success"></span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">AMZN</td>
+                                    <td class="text-muted">Amazon</td>
+                                    <td><span class="badge bg-light text-dark border">NASDAQ</span></td>
+                                    <td class="text-end fw-medium">$210.45</td>
+                                    <td class="text-end text-loss">-0.85%</td>
+                                    <td class="text-end text-muted">35.6M</td>
+                                    <td class="text-end text-muted">2.1T</td>
+                                    <td><span class="status-dot bg-success"></span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">GOOGL</td>
+                                    <td class="text-muted">Alphabet</td>
+                                    <td><span class="badge bg-light text-dark border">NASDAQ</span></td>
+                                    <td class="text-end fw-medium">$195.30</td>
+                                    <td class="text-end text-gain">+0.45%</td>
+                                    <td class="text-end text-muted">28.9M</td>
+                                    <td class="text-end text-muted">2.4T</td>
+                                    <td><span class="status-dot bg-success"></span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary">Details</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">META</td>
+                                    <td class="text-muted">Meta</td>
+                                    <td><span class="badge bg-light text-dark border">NASDAQ</span></td>
+                                    <td class="text-end fw-medium">$560.15</td>
+                                    <td class="text-end text-gain">+1.80%</td>
+                                    <td class="text-end text-muted">18.2M</td>
+                                    <td class="text-end text-muted">1.4T</td>
+                                    <td><span class="status-dot bg-success"></span></td>
+                                    <td class="text-end"><button
+                                            class="btn btn-sm btn-outline-secondary">Details</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="card market-card h-100">
+                        <div class="card-header bg-white border-bottom-0 pt-4 px-4">
+                            <h5 class="fw-bold text-accent mb-0">Foreign Exchange</h5>
+                        </div>
+                        <div class="card-body px-4 pb-4 pt-2">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-custom align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Pair</th>
+                                            <th class="text-end">Bid</th>
+                                            <th class="text-end">Ask</th>
+                                            <th class="text-end">Spread</th>
+                                            <th class="text-end">Change</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold">EUR/USD</td>
+                                            <td class="text-end">1.1042</td>
+                                            <td class="text-end">1.1044</td>
+                                            <td class="text-end text-muted">2.0</td>
+                                            <td class="text-end"><span class="badge badge-gain">+0.12%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">GBP/USD</td>
+                                            <td class="text-end">1.2855</td>
+                                            <td class="text-end">1.2858</td>
+                                            <td class="text-end text-muted">3.0</td>
+                                            <td class="text-end"><span class="badge badge-loss">-0.08%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">USD/JPY</td>
+                                            <td class="text-end">152.30</td>
+                                            <td class="text-end">152.32</td>
+                                            <td class="text-end text-muted">2.0</td>
+                                            <td class="text-end"><span class="badge badge-gain">+0.45%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">USD/CAD</td>
+                                            <td class="text-end">1.3620</td>
+                                            <td class="text-end">1.3623</td>
+                                            <td class="text-end text-muted">3.0</td>
+                                            <td class="text-end"><span class="badge badge-loss">-0.15%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">AUD/USD</td>
+                                            <td class="text-end">0.6740</td>
+                                            <td class="text-end">0.6742</td>
+                                            <td class="text-end text-muted">2.0</td>
+                                            <td class="text-end"><span class="badge badge-gain">+0.25%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">USD/GHS</td>
+                                            <td class="text-end">14.85</td>
+                                            <td class="text-end">14.95</td>
+                                            <td class="text-end text-muted">10.0</td>
+                                            <td class="text-end"><span class="badge badge-gain">+0.10%</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card market-card h-100">
+                        <div class="card-header bg-white border-bottom-0 pt-4 px-4">
+                            <h5 class="fw-bold text-accent mb-0">Commodities</h5>
+                        </div>
+                        <div class="card-body px-4 pb-4 pt-2">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-custom align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Commodity</th>
+                                            <th class="text-end">Price</th>
+                                            <th>Unit</th>
+                                            <th class="text-end">Change</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold">Gold</td>
+                                            <td class="text-end">3,421.80</td>
+                                            <td class="text-muted small">USD/oz</td>
+                                            <td class="text-end text-gain">+0.55%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Silver</td>
+                                            <td class="text-end">32.40</td>
+                                            <td class="text-muted small">USD/oz</td>
+                                            <td class="text-end text-gain">+1.10%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Crude Oil</td>
+                                            <td class="text-end">82.15</td>
+                                            <td class="text-muted small">USD/bbl</td>
+                                            <td class="text-end text-loss">-1.25%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Natural Gas</td>
+                                            <td class="text-end">2.85</td>
+                                            <td class="text-muted small">USD/MMBtu</td>
+                                            <td class="text-end text-loss">-0.50%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Copper</td>
+                                            <td class="text-end">4.65</td>
+                                            <td class="text-muted small">USD/lb</td>
+                                            <td class="text-end text-gain">+0.80%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Coffee</td>
+                                            <td class="text-end">235.50</td>
+                                            <td class="text-muted small">USd/lb</td>
+                                            <td class="text-end text-gain">+1.45%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Cocoa</td>
+                                            <td class="text-end">8,450.00</td>
+                                            <td class="text-muted small">USD/MT</td>
+                                            <td class="text-end text-loss">-2.10%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card market-card mb-4">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4">
+                    <h5 class="fw-bold text-accent mb-0">Interest Rates</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-custom align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Central Bank</th>
+                                    <th class="text-end">Current Rate</th>
+                                    <th class="text-end">Previous Rate</th>
+                                    <th class="text-end">Next Meeting</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold d-flex align-items-center gap-2">
+                                        <img src="https://flagcdn.com/20x15/us.png" alt="US" class="rounded-1"> US
+                                        Federal Reserve
+                                    </td>
+                                    <td class="text-end fw-medium">5.25%</td>
+                                    <td class="text-end text-muted">5.50%</td>
+                                    <td class="text-end text-muted">Sep 18, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold d-flex align-items-center gap-2">
+                                        <img src="https://flagcdn.com/20x15/gb.png" alt="UK" class="rounded-1"> Bank of
+                                        England
+                                    </td>
+                                    <td class="text-end fw-medium">5.00%</td>
+                                    <td class="text-end text-muted">5.25%</td>
+                                    <td class="text-end text-muted">Aug 01, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold d-flex align-items-center gap-2">
+                                        <img src="https://flagcdn.com/20x15/eu.png" alt="EU" class="rounded-1"> European
+                                        Central Bank
+                                    </td>
+                                    <td class="text-end fw-medium">3.75%</td>
+                                    <td class="text-end text-muted">4.00%</td>
+                                    <td class="text-end text-muted">Sep 12, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold d-flex align-items-center gap-2">
+                                        <img src="https://flagcdn.com/20x15/jp.png" alt="JP" class="rounded-1"> Bank of
+                                        Japan
+                                    </td>
+                                    <td class="text-end fw-medium">0.25%</td>
+                                    <td class="text-end text-muted">0.10%</td>
+                                    <td class="text-end text-muted">Jul 31, 2026</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold d-flex align-items-center gap-2">
+                                        <img src="https://flagcdn.com/20x15/gh.png" alt="GH" class="rounded-1"> Bank of
+                                        Ghana
+                                    </td>
+                                    <td class="text-end fw-medium">29.00%</td>
+                                    <td class="text-end text-muted">29.50%</td>
+                                    <td class="text-end text-muted">Jul 27, 2026</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-5">
+
+            <div class="card market-card mb-4 bg-accent text-white shadow-sm">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div>
+                            <h6 class="text-white-50 text-uppercase fw-bold mb-1">Volatility Index (VIX)</h6>
+                            <h2 class="fw-bold mb-0">14.25</h2>
+                        </div>
+                        <div class="text-end">
+                            <span
+                                class="badge bg-danger bg-opacity-25 text-white border border-danger border-opacity-50 px-2 py-1 mb-1">Low</span>
+                            <div class="text-danger small"><i class="bi bi-caret-down-fill"></i> -2.15%</div>
+                        </div>
+                    </div>
+                    <p class="small text-white-50 mb-0">Market Sentiment: <strong>Complacent</strong></p>
+
+                    <div class="chart-placeholder mt-4 d-flex align-items-center justify-content-center border border-secondary border-opacity-25 rounded"
+                        style="height: 140px; background: rgba(255,255,255,0.05);">
+                        <span class="text-white-50 small"><i class="bi bi-bar-chart me-2"></i>Volatility trend chart
+                            will be displayed here.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card market-card mb-4">
+                <div
+                    class="card-header bg-white border-bottom-0 pt-4 px-4 d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold text-accent mb-0">Watchlist</h5>
+                    <button class="btn btn-sm btn-outline-accent py-0 px-2"><i class="bi bi-plus"></i></button>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2">
+                    <ul class="list-group list-group-flush">
+                        <li
+                            class="list-group-item px-0 py-2 d-flex justify-content-between align-items-center border-0">
+                            <span class="fw-bold">Apple</span>
+                            <div class="text-end">
+                                <span class="fw-medium d-block">$235.10</span>
+                                <span class="text-gain small">+1.15% <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item px-0 py-2 d-flex justify-content-between align-items-center border-0">
+                            <span class="fw-bold">Microsoft</span>
+                            <div class="text-end">
+                                <span class="fw-medium d-block">$450.25</span>
+                                <span class="text-loss small">-0.32% <i class="bi bi-arrow-down-right"></i></span>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item px-0 py-2 d-flex justify-content-between align-items-center border-0">
+                            <span class="fw-bold">Tesla</span>
+                            <div class="text-end">
+                                <span class="fw-medium d-block">$285.60</span>
+                                <span class="text-gain small">+2.10% <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item px-0 py-2 d-flex justify-content-between align-items-center border-0">
+                            <span class="fw-bold">Gold</span>
+                            <div class="text-end">
+                                <span class="fw-medium d-block">$3,421.80</span>
+                                <span class="text-gain small">+0.55% <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item px-0 py-2 d-flex justify-content-between align-items-center border-0">
+                            <span class="fw-bold">Bitcoin</span>
+                            <div class="text-end">
+                                <span class="fw-medium d-block">$118,250</span>
+                                <span class="text-gain small">+2.91% <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item px-0 py-2 d-flex justify-content-between align-items-center border-0">
+                            <span class="fw-bold">EUR/USD</span>
+                            <div class="text-end">
+                                <span class="fw-medium d-block">1.1042</span>
+                                <span class="text-gain small">+0.12% <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item px-0 py-2 d-flex justify-content-between align-items-center border-0">
+                            <span class="fw-bold">S&P 500</span>
+                            <div class="text-end">
+                                <span class="fw-medium d-block">6,342.45</span>
+                                <span class="text-gain small">+1.24% <i class="bi bi-arrow-up-right"></i></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-4">
+                <div class="col-6">
+                    <div class="card market-card h-100">
+                        <div class="card-body p-3">
+                            <h6 class="fw-bold text-accent mb-3"><i class="bi bi-rocket-takeoff text-gain me-2"></i>Top
+                                Gainers</h6>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="fw-bold fs-7">NVDA</span>
+                                <span class="text-gain fs-7">+4.20%</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="fw-bold fs-7">AMD</span>
+                                <span class="text-gain fs-7">+3.85%</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="fw-bold fs-7">TSLA</span>
+                                <span class="text-gain fs-7">+2.10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card market-card h-100">
+                        <div class="card-body p-3">
+                            <h6 class="fw-bold text-accent mb-3"><i
+                                    class="bi bi-graph-down-arrow text-loss me-2"></i>Top Losers</h6>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="fw-bold fs-7">INTC</span>
+                                <span class="text-loss fs-7">-2.40%</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span class="fw-bold fs-7">BA</span>
+                                <span class="text-loss fs-7">-1.85%</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="fw-bold fs-7">NKE</span>
+                                <span class="text-loss fs-7">-1.50%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card market-card">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4">
+                    <h5 class="fw-bold text-accent mb-0">Market News</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2">
+                    <div class="news-item mb-3 pb-3 border-bottom">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="bi bi-bank text-primary mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1 fs-7">Federal Reserve signals interest rate pause</h6>
+                                <div class="text-muted small">Economy • 10m ago</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-item mb-3 pb-3 border-bottom">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="bi bi-shield-fill-check text-warning mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1 fs-7">Gold prices climb amid inflation concerns</h6>
+                                <div class="text-muted small">Commodities • 45m ago</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-item mb-3 pb-3 border-bottom">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="bi bi-droplet-fill text-dark mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1 fs-7">Oil prices decline after inventory report</h6>
+                                <div class="text-muted small">Energy • 1h ago</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-item mb-3 pb-3 border-bottom">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="bi bi-car-front-fill text-danger mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1 fs-7">Tesla shares rally on earnings beat</h6>
+                                <div class="text-muted small">Equities • 2h ago</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-item mb-0">
+                        <div class="d-flex align-items-start gap-2">
+                            <i class="bi bi-currency-bitcoin text-warning mt-1"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1 fs-7">Bitcoin reaches new yearly high</h6>
+                                <div class="text-muted small">Crypto • 3h ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

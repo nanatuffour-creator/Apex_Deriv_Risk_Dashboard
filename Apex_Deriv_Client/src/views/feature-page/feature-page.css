@@ -1,0 +1,27 @@
+.feature-page {
+  min-height: calc(100vh - 84px);
+  display: grid;
+  place-items: center;
+  color: #e2e8f0;
+}
+
+.feature-card {
+  max-width: 560px;
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 1.35rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.feature-card h2 {
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+
+.feature-card p {
+  color: #94a3b8;
+  margin-bottom: 1.1rem;
+  line-height: 1.7;
+}

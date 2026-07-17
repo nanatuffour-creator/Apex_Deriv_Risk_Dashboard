@@ -1,0 +1,42 @@
+.settings-dashboard {
+  background-color: #f8fafc;
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.text-accent { color: #0F172A !important; }
+
+.btn-accent {
+  background-color: #0F172A;
+  color: #fff;
+}
+
+.btn-accent:hover { background-color: #1e293b; color: #fff; }
+
+.dashboard-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.table {
+  font-size: 0.875rem;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: #0F172A;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row-cols-md-2 {
+    display: block;
+  }
+}

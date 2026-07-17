@@ -1,0 +1,552 @@
+<div class="reports-dashboard py-4 px-3">
+
+    <div class="row mb-4 align-items-center g-3">
+        <div class="col-xl-6 col-lg-5">
+            <h2 class="text-accent fw-bold mb-1">Reports</h2>
+            <p class="text-muted mb-0">Generate, view and export portfolio, market and risk analysis reports.</p>
+        </div>
+        <div class="col-xl-6 col-lg-7 d-flex flex-wrap justify-content-lg-end gap-2">
+            <button class="btn btn-accent fw-medium btn-sm px-3 py-2">
+                <i class="bi bi-file-earmark-plus me-1"></i> Generate Report
+            </button>
+            <button class="btn btn-outline-accent fw-medium btn-sm px-3 py-2">
+                <i class="bi bi-download me-1"></i> Export
+            </button>
+            <button class="btn btn-outline-accent fw-medium btn-sm px-3 py-2">
+                <i class="bi bi-printer me-1"></i> Print
+            </button>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-3 mb-4">
+        <div class="col">
+            <div class="card dashboard-card h-100">
+                <div class="card-body p-3 d-flex align-items-center">
+                    <div class="icon-box bg-light text-accent rounded-3 me-3">
+                        <i class="bi bi-file-earmark-text fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted small fw-semibold mb-1">Reports Generated</h6>
+                        <h4 class="fw-bold text-accent mb-0">128</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dashboard-card h-100">
+                <div class="card-body p-3 d-flex align-items-center">
+                    <div class="icon-box bg-light text-accent rounded-3 me-3">
+                        <i class="bi bi-calendar-event fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted small fw-semibold mb-1">Scheduled Reports</h6>
+                        <h4 class="fw-bold text-accent mb-0">12</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dashboard-card h-100">
+                <div class="card-body p-3 d-flex align-items-center">
+                    <div class="icon-box bg-light text-accent rounded-3 me-3">
+                        <i class="bi bi-download fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted small fw-semibold mb-1">Downloaded Reports</h6>
+                        <h4 class="fw-bold text-accent mb-0">54</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card dashboard-card h-100">
+                <div class="card-body p-3 d-flex align-items-center">
+                    <div class="icon-box bg-light text-accent rounded-3 me-3">
+                        <i class="bi bi-clock-history fs-4"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-muted small fw-semibold mb-1">Last Generated</h6>
+                        <h5 class="fw-bold text-accent mb-0">Today 09:45 AM</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 row-cols-xl-6 g-3 mb-4">
+        <div class="col">
+            <div class="card category-card h-100 text-center p-3">
+                <i class="bi bi-briefcase fs-3 text-accent mb-2"></i>
+                <h6 class="fw-bold text-accent mb-1">Portfolio</h6>
+                <span class="badge bg-light text-muted border mb-2">42 Reports</span>
+                <p class="small text-muted mb-0">Holdings & allocations.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card category-card h-100 text-center p-3">
+                <i class="bi bi-shield-exclamation fs-3 text-accent mb-2"></i>
+                <h6 class="fw-bold text-accent mb-1">Risk</h6>
+                <span class="badge bg-light text-muted border mb-2">28 Reports</span>
+                <p class="small text-muted mb-0">VaR & stress testing.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card category-card h-100 text-center p-3">
+                <i class="bi bi-globe fs-3 text-accent mb-2"></i>
+                <h6 class="fw-bold text-accent mb-1">Market</h6>
+                <span class="badge bg-light text-muted border mb-2">15 Reports</span>
+                <p class="small text-muted mb-0">Macro & micro trends.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card category-card h-100 text-center p-3">
+                <i class="bi bi-graph-up fs-3 text-accent mb-2"></i>
+                <h6 class="fw-bold text-accent mb-1">Performance</h6>
+                <span class="badge bg-light text-muted border mb-2">19 Reports</span>
+                <p class="small text-muted mb-0">Returns & benchmarks.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card category-card h-100 text-center p-3">
+                <i class="bi bi-bezier fs-3 text-accent mb-2"></i>
+                <h6 class="fw-bold text-accent mb-1">Derivatives</h6>
+                <span class="badge bg-light text-muted border mb-2">12 Reports</span>
+                <p class="small text-muted mb-0">Greeks & exposures.</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card category-card h-100 text-center p-3">
+                <i class="bi bi-check2-square fs-3 text-accent mb-2"></i>
+                <h6 class="fw-bold text-accent mb-1">Compliance</h6>
+                <span class="badge bg-light text-muted border mb-2">12 Reports</span>
+                <p class="small text-muted mb-0">Regulatory limits.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-xl-4">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Generate New Report</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label small fw-semibold text-muted mb-1">Report Type</label>
+                            <select class="form-select border-secondary-subtle shadow-none">
+                                <option selected>Portfolio Report</option>
+                                <option>Risk Analysis Report</option>
+                                <option>Market Summary Report</option>
+                                <option>Asset Allocation Report</option>
+                                <option>Derivative Exposure Report</option>
+                                <option>Performance Report</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label small fw-semibold text-muted mb-1">Date Range</label>
+                            <select class="form-select border-secondary-subtle shadow-none">
+                                <option>Today</option>
+                                <option>Last 7 Days</option>
+                                <option selected>Last 30 Days</option>
+                                <option>This Quarter</option>
+                                <option>Year to Date</option>
+                                <option>Custom</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label small fw-semibold text-muted mb-1">Asset Class</label>
+                            <select class="form-select border-secondary-subtle shadow-none">
+                                <option selected>All Assets</option>
+                                <option>Equities</option>
+                                <option>Bonds</option>
+                                <option>Commodities</option>
+                                <option>ETFs</option>
+                                <option>Forex</option>
+                                <option>Crypto</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label small fw-semibold text-muted mb-1">Report Format</label>
+                            <select class="form-select border-secondary-subtle shadow-none">
+                                <option selected>PDF</option>
+                                <option>Excel</option>
+                                <option>CSV</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4 bg-light p-3 rounded border border-secondary-subtle">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input shadow-none" type="checkbox" id="chkCharts" checked>
+                                <label class="form-check-label small fw-medium" for="chkCharts">Include Charts</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input shadow-none" type="checkbox" id="chkHoldings" checked>
+                                <label class="form-check-label small fw-medium" for="chkHoldings">Include Portfolio
+                                    Holdings</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input shadow-none" type="checkbox" id="chkRisk">
+                                <label class="form-check-label small fw-medium" for="chkRisk">Include Risk
+                                    Metrics</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input shadow-none" type="checkbox" id="chkMarket">
+                                <label class="form-check-label small fw-medium" for="chkMarket">Include Market
+                                    Data</label>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-accent w-100 fw-medium py-2">
+                            Generate Report
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-8">
+            <div class="card dashboard-card h-100">
+                <div
+                    class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2 d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold text-accent mb-0">Report Preview</h5>
+                    <button class="btn btn-sm btn-link text-muted text-decoration-none p-0"><i
+                            class="bi bi-arrows-fullscreen"></i></button>
+                </div>
+                <div class="card-body px-4 pb-4 pt-2 d-flex flex-column">
+                    <div
+                        class="preview-placeholder flex-grow-1 d-flex flex-column align-items-center justify-content-center bg-light rounded border border-2 border-dashed">
+                        <i class="bi bi-file-earmark-pdf fs-1 text-secondary opacity-50 mb-3"></i>
+                        <span class="fw-medium text-muted">Generated report preview will appear here.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card dashboard-card">
+                <div class="card-header bg-white border-bottom pt-3 px-4 pb-3">
+                    <div class="row align-items-center gap-3 gap-md-0">
+                        <div class="col-md-5 col-lg-4">
+                            <h5 class="fw-bold text-accent mb-3 mb-md-0">Recent Reports</h5>
+                        </div>
+                        <div class="col-md-7 col-lg-8 d-flex flex-wrap justify-content-md-end gap-2">
+                            <div class="input-group input-group-sm w-auto">
+                                <span class="input-group-text bg-white border-secondary-subtle"><i
+                                        class="bi bi-search text-muted"></i></span>
+                                <input type="text" class="form-control border-secondary-subtle shadow-none"
+                                    placeholder="Search reports...">
+                            </div>
+                            <select class="form-select form-select-sm border-secondary-subtle shadow-none w-auto">
+                                <option selected>Category</option>
+                                <option>Portfolio</option>
+                                <option>Risk</option>
+                                <option>Market</option>
+                            </select>
+                            <select class="form-select form-select-sm border-secondary-subtle shadow-none w-auto">
+                                <option selected>Status</option>
+                                <option>Ready</option>
+                                <option>Processing</option>
+                                <option>Failed</option>
+                            </select>
+                            <select class="form-select form-select-sm border-secondary-subtle shadow-none w-auto">
+                                <option selected>Date</option>
+                                <option>Newest First</option>
+                                <option>Oldest First</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-custom align-middle mb-0">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="ps-4">Report Name</th>
+                                    <th>Category</th>
+                                    <th>Created By</th>
+                                    <th>Created Date</th>
+                                    <th>Format</th>
+                                    <th>Status</th>
+                                    <th class="text-end pe-4">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ps-4 fw-medium text-accent"><i
+                                            class="bi bi-file-earmark-pdf text-danger me-2"></i>Portfolio Summary - June
+                                        2026</td>
+                                    <td><span class="badge bg-primary bg-opacity-10 text-primary">Portfolio</span></td>
+                                    <td class="text-muted">System</td>
+                                    <td>Jun 30, 2026</td>
+                                    <td class="text-muted">PDF</td>
+                                    <td><span class="badge bg-success">Ready</span></td>
+                                    <td class="text-end pe-4">
+                                        <button class="btn btn-sm btn-link text-accent p-1"><i
+                                                class="bi bi-eye"></i></button>
+                                        <button class="btn btn-sm btn-link text-accent p-1"><i
+                                                class="bi bi-download"></i></button>
+                                        <button class="btn btn-sm btn-link text-danger p-1"><i
+                                                class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ps-4 fw-medium text-accent"><i
+                                            class="bi bi-file-earmark-excel text-success me-2"></i>Risk Analysis Report
+                                    </td>
+                                    <td><span class="badge bg-danger bg-opacity-10 text-danger">Risk</span></td>
+                                    <td class="text-muted">J. Doe</td>
+                                    <td>Jul 15, 2026</td>
+                                    <td class="text-muted">Excel</td>
+                                    <td><span class="badge bg-success">Ready</span></td>
+                                    <td class="text-end pe-4">
+                                        <button class="btn btn-sm btn-link text-accent p-1"><i
+                                                class="bi bi-eye"></i></button>
+                                        <button class="btn btn-sm btn-link text-accent p-1"><i
+                                                class="bi bi-download"></i></button>
+                                        <button class="btn btn-sm btn-link text-danger p-1"><i
+                                                class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ps-4 fw-medium text-accent"><i
+                                            class="bi bi-file-earmark-text text-secondary me-2"></i>Derivative Exposure
+                                        Report</td>
+                                    <td><span class="badge bg-warning bg-opacity-10 text-dark">Derivatives</span></td>
+                                    <td class="text-muted">A. Smith</td>
+                                    <td>Jul 14, 2026</td>
+                                    <td class="text-muted">CSV</td>
+                                    <td><span class="badge bg-secondary">Processing</span></td>
+                                    <td class="text-end pe-4">
+                                        <button class="btn btn-sm btn-link text-muted p-1" disabled><i
+                                                class="bi bi-eye"></i></button>
+                                        <button class="btn btn-sm btn-link text-muted p-1" disabled><i
+                                                class="bi bi-download"></i></button>
+                                        <button class="btn btn-sm btn-link text-danger p-1"><i
+                                                class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ps-4 fw-medium text-accent"><i
+                                            class="bi bi-file-earmark-pdf text-danger me-2"></i>Weekly Market Summary
+                                    </td>
+                                    <td><span class="badge bg-info bg-opacity-10 text-info">Market</span></td>
+                                    <td class="text-muted">System</td>
+                                    <td>Jul 10, 2026</td>
+                                    <td class="text-muted">PDF</td>
+                                    <td><span class="badge bg-success">Ready</span></td>
+                                    <td class="text-end pe-4">
+                                        <button class="btn btn-sm btn-link text-accent p-1"><i
+                                                class="bi bi-eye"></i></button>
+                                        <button class="btn btn-sm btn-link text-accent p-1"><i
+                                                class="bi bi-download"></i></button>
+                                        <button class="btn btn-sm btn-link text-danger p-1"><i
+                                                class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ps-4 fw-medium text-accent"><i
+                                            class="bi bi-file-earmark-pdf text-danger me-2"></i>Quarterly Performance
+                                        Report</td>
+                                    <td><span class="badge bg-success bg-opacity-10 text-success">Performance</span>
+                                    </td>
+                                    <td class="text-muted">J. Doe</td>
+                                    <td>Jul 01, 2026</td>
+                                    <td class="text-muted">PDF</td>
+                                    <td><span class="badge bg-success">Ready</span></td>
+                                    <td class="text-end pe-4">
+                                        <button class="btn btn-sm btn-link text-accent p-1"><i
+                                                class="bi bi-eye"></i></button>
+                                        <button class="btn btn-sm btn-link text-accent p-1"><i
+                                                class="bi bi-download"></i></button>
+                                        <button class="btn btn-sm btn-link text-danger p-1"><i
+                                                class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-xl-6">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Scheduled Reports</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-custom align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Report</th>
+                                    <th>Frequency</th>
+                                    <th>Next Run</th>
+                                    <th class="text-end">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-medium text-accent">Daily Portfolio Summary</td>
+                                    <td class="text-muted">Daily, 06:00 AM</td>
+                                    <td class="text-muted">Tomorrow</td>
+                                    <td class="text-end"><span class="badge bg-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium text-accent">Weekly Risk Report</td>
+                                    <td class="text-muted">Weekly, Mon</td>
+                                    <td class="text-muted">Jul 20, 2026</td>
+                                    <td class="text-end"><span class="badge bg-success">Active</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium text-accent">Monthly Performance Report</td>
+                                    <td class="text-muted">Monthly, 1st</td>
+                                    <td class="text-muted">Aug 01, 2026</td>
+                                    <td class="text-end"><span class="badge bg-warning text-dark">Paused</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium text-accent">Quarterly Asset Allocation</td>
+                                    <td class="text-muted">Quarterly</td>
+                                    <td class="text-muted">Oct 01, 2026</td>
+                                    <td class="text-end"><span class="badge bg-success">Active</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-6">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Download History</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-custom align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Report Name</th>
+                                    <th>Downloaded By</th>
+                                    <th>Download Date</th>
+                                    <th class="text-end">Format</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-medium text-accent">Risk Analysis Report</td>
+                                    <td class="text-muted">A. Smith</td>
+                                    <td class="text-muted">Today, 10:15 AM</td>
+                                    <td class="text-end"><span class="badge bg-light text-dark border">Excel</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium text-accent">Portfolio Summary - June</td>
+                                    <td class="text-muted">J. Doe</td>
+                                    <td class="text-muted">Yesterday, 14:30</td>
+                                    <td class="text-end"><span class="badge bg-light text-dark border">PDF</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium text-accent">Derivative Exposure Q2</td>
+                                    <td class="text-muted">M. Johnson</td>
+                                    <td class="text-muted">Jul 12, 2026</td>
+                                    <td class="text-end"><span class="badge bg-light text-dark border">CSV</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-medium text-accent">Weekly Market Summary</td>
+                                    <td class="text-muted">System API</td>
+                                    <td class="text-muted">Jul 10, 2026</td>
+                                    <td class="text-end"><span class="badge bg-light text-dark border">PDF</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-xl-8">
+            <div class="row h-100 g-4">
+                <div class="col-md-4">
+                    <div class="card dashboard-card h-100 p-4 text-center d-flex flex-column justify-content-center">
+                        <i class="bi bi-star-fill text-warning fs-3 mb-2"></i>
+                        <h6 class="text-muted small fw-semibold mb-1">Most Generated Report</h6>
+                        <h5 class="fw-bold text-accent mb-0">Portfolio Summary</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card dashboard-card h-100 p-4 text-center d-flex flex-column justify-content-center">
+                        <i class="bi bi-cloud-arrow-down-fill text-info fs-3 mb-2"></i>
+                        <h6 class="text-muted small fw-semibold mb-1">Most Downloaded Report</h6>
+                        <h5 class="fw-bold text-accent mb-0">Risk Analysis Report</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card dashboard-card h-100 p-4 text-center d-flex flex-column justify-content-center">
+                        <i class="bi bi-hdd-network-fill text-success fs-3 mb-2"></i>
+                        <h6 class="text-muted small fw-semibold mb-1">Storage Used</h6>
+                        <h5 class="fw-bold text-accent mb-0">2.8 GB</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4">
+            <div class="card dashboard-card h-100">
+                <div class="card-header bg-white border-bottom-0 pt-4 px-4 pb-2">
+                    <h5 class="fw-bold text-accent mb-0">Recent Activity</h5>
+                </div>
+                <div class="card-body px-4 pb-4 pt-3">
+                    <div class="custom-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon text-success"><i class="bi bi-plus-circle-fill"></i></div>
+                            <div class="timeline-content">
+                                <p class="mb-0 fw-medium text-accent small">Generated Portfolio Report</p>
+                                <small class="text-muted" style="font-size: 0.7rem;">Today, 09:45 AM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon text-primary"><i class="bi bi-cloud-arrow-down-fill"></i></div>
+                            <div class="timeline-content">
+                                <p class="mb-0 fw-medium text-accent small">Downloaded Risk Report</p>
+                                <small class="text-muted" style="font-size: 0.7rem;">Today, 08:30 AM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon text-danger"><i class="bi bi-trash-fill"></i></div>
+                            <div class="timeline-content">
+                                <p class="mb-0 fw-medium text-accent small">Deleted Old Market Report</p>
+                                <small class="text-muted" style="font-size: 0.7rem;">Yesterday, 16:15 PM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon text-info"><i class="bi bi-calendar-check-fill"></i></div>
+                            <div class="timeline-content">
+                                <p class="mb-0 fw-medium text-accent small">Scheduled Monthly Report</p>
+                                <small class="text-muted" style="font-size: 0.7rem;">Jul 12, 11:00 AM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon text-secondary"><i class="bi bi-box-arrow-up-right"></i></div>
+                            <div class="timeline-content border-0 pb-0">
+                                <p class="mb-0 fw-medium text-accent small">Exported Derivative Report</p>
+                                <small class="text-muted" style="font-size: 0.7rem;">Jul 10, 14:20 PM</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

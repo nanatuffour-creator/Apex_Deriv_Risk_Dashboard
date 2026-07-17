@@ -1,0 +1,119 @@
+<div class="register-container p-0">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+        <a routerLink="/" class="back-home">
+            <i class="bi bi-arrow-left"></i>
+            Back to Home
+        </a>
+
+        <div class="branding">
+            <h1>
+                <span class="text-primary">Apex</span>Deriv
+            </h1>
+            <h2>Create Your Account</h2>
+            <p>
+                Join ApexDeriv and manage multi-asset portfolios,
+                monitor derivatives, analyze risk, and generate
+                professional reports from one secure platform.
+            </p>
+
+            <ul class="feature-list">
+                <li><i class="bi bi-check-circle-fill"></i> Portfolio Management</li>
+                <li><i class="bi bi-check-circle-fill"></i> Risk Analytics</li>
+                <li><i class="bi bi-check-circle-fill"></i> Multi-Asset Support</li>
+                <li><i class="bi bi-check-circle-fill"></i> Executive Reporting</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+        <div class="register-card">
+            <h2>Create Account</h2>
+            <p>Complete the form below to get started.</p>
+
+            <form [formGroup]="userData" (ngSubmit)="register()">
+
+                @if (serverError) {
+                <div class="server-error">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    <span>{{ serverError }}</span>
+                </div>
+                }
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>First Name</label>
+                        <input class="form-control" formControlName="firstname"
+                            [class.is-invalid]="getControl('firstname')?.touched && getControl('firstname')?.invalid">
+
+                        @if (getFieldError('firstname')) {
+                        <div class="field-error">{{ getFieldError('firstname') }}</div>
+                        }
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Last Name</label>
+                        <input class="form-control" formControlName="lastname"
+                            [class.is-invalid]="getControl('lastname')?.touched && getControl('lastname')?.invalid">
+
+                        @if (getFieldError('lastname')) {
+                        <div class="field-error">{{ getFieldError('lastname') }}</div>
+                        }
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" formControlName="email"
+                        [class.is-invalid]="getControl('email')?.touched && getControl('email')?.invalid">
+
+                    @if (getFieldError('email')) {
+                    <div class="field-error">{{ getFieldError('email') }}</div>
+                    }
+
+                    @if (serverError && serverError.toLowerCase().includes('email') && getControl('email')?.touched) {
+                    <div class="field-error">{{ serverError }}</div>
+                    }
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label>Password</label>
+                        <input type="password" class="form-control" formControlName="passwordHash"
+                            [class.is-invalid]="getControl('passwordHash')?.touched && getControl('passwordHash')?.invalid">
+
+                        @if (getFieldError('passwordHash')) {
+                        <div class="field-error">{{ getFieldError('passwordHash') }}</div>
+                        }
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" formControlName="confirmPasswordHash"
+                            [class.is-invalid]="(getControl('confirmPasswordHash')?.touched && getControl('confirmPasswordHash')?.invalid) || getPasswordMismatchError()">
+
+                        @if (getFieldError('confirmPasswordHash')) {
+                        <div class="field-error">{{ getFieldError('confirmPasswordHash') }}</div>
+                        }
+
+                        @if (getPasswordMismatchError()) {
+                        <div class="field-error">{{ getPasswordMismatchError() }}</div>
+                        }
+                    </div>
+                </div>
+
+                <button class="btn btn-primary w-100" [disabled]="isSubmitting || userData.invalid">
+                    {{ isSubmitting ? 'Creating Account...' : 'Create Account' }}
+                </button>
+
+            </form>
+
+            <div class="text-center mt-4">
+                Already have an account?
+                <a routerLink="/login">Sign In</a>
+            </div>
+        </div>
+    </div>
+</div>

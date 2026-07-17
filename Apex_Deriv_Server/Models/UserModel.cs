@@ -23,5 +23,6 @@ namespace Apex_Deriv_Server.Models
         [EmailAddress]
         public string Email { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public ICollection<Portfolio>? Portfolios { get; set; } = new List<Portfolio>();//Collection navigation property to represent the one-to-many relationship with Portfolio
     }
 }

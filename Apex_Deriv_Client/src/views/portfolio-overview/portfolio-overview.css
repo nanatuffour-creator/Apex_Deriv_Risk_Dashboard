@@ -1,0 +1,262 @@
+/* Color System Constants & Font Settings */
+:host {
+  --slate-primary: #0F172A; /* Slate 900 */
+  --slate-secondary: #475569; /* Slate 600 */
+  --slate-light: #F8FAFC; /* Slate 50 */
+  --slate-border: #E2E8F0; /* Slate 200 */
+  --emerald-green: #10B981;
+  --emerald-light: #ECEFEE;
+}
+
+/* Base Styles */
+.bg-light-gray {
+  background-color: var(--slate-light);
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.text-slate {
+  color: var(--slate-primary) !important;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+.fs-xs {
+  font-size: 0.75rem;
+}
+
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
+
+.max-w-200 {
+  max-width: 200px;
+}
+
+/* Cards customization */
+.card {
+  border-radius: 1rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.card-summary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Custom Soft Colors for Enterprise Vibe */
+.bg-slate-soft {
+  background-color: #F1F5F9;
+}
+
+.bg-emerald-soft {
+  background-color: #ECFDF5;
+}
+
+.bg-success-soft {
+  background-color: #DCFCE7;
+}
+
+.bg-danger-soft {
+  background-color: #FEE2E2;
+}
+
+.bg-warning-soft {
+  background-color: #FEF3C7;
+}
+
+.bg-info-soft {
+  background-color: #E0F2FE;
+}
+
+.bg-purple-soft {
+  background-color: #F3E8FF;
+}
+
+.bg-dark-soft {
+  background-color: #F1F5F9;
+}
+
+.bg-primary-soft {
+  background-color: #EFF6FF;
+}
+
+.bg-light-soft {
+  background-color: #FAFAFA;
+}
+
+.text-warning-dark {
+  color: #B45309;
+}
+
+/* Action Button Overrides */
+.btn-slate {
+  background-color: var(--slate-primary);
+  color: #FFFFFF;
+  border: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.btn-slate:hover {
+  background-color: #1e293b;
+  color: #FFFFFF;
+}
+
+.btn-action {
+  border-color: var(--slate-border);
+  color: var(--slate-secondary);
+}
+
+.btn-action:hover {
+  background-color: var(--slate-border);
+  color: var(--slate-primary);
+}
+
+/* Shared Icon Shapes */
+.icon-shape {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Line & Pie Chart Placeholders */
+.border-dashed {
+  border: 2px dashed #E2E8F0;
+}
+
+.chart-placeholder {
+  height: clamp(220px, 32vw, 300px);
+  background-color: #FCFDFE;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+}
+
+.chart-placeholder:hover {
+  background-color: #FAFCFE;
+}
+
+.pie-placeholder {
+  height: clamp(160px, 24vw, 180px);
+  background-color: #FCFDFE;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Allocation Indicators */
+.dot-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Table Style Polish */
+.table-light-thead th {
+  background-color: #F1F5F9;
+  color: var(--slate-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--slate-border);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #F8FAFC !important;
+}
+
+.badge-flat {
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.75rem;
+  padding: 0.35em 0.65em;
+}
+
+.btn-light-action {
+  background-color: #F1F5F9;
+  border: none;
+  color: var(--slate-secondary);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-light-action:hover {
+  background-color: var(--slate-primary);
+  color: #FFFFFF;
+}
+
+/* Timeline Custom Component */
+.timeline {
+  position: relative;
+  padding-left: 2.25rem;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-indicator-line {
+  position: absolute;
+  top: 1.5rem;
+  left: -1.45rem;
+  width: 2px;
+  height: calc(100% - 1rem);
+  background-color: var(--slate-border);
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -2.25rem;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  z-index: 2;
+}
+
+.timeline-content {
+  background-color: #FCFDFE;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #F1F5F9;
+  transition: border-color 0.2s ease;
+}
+
+.timeline-content:hover {
+  border-color: var(--slate-border);
+}
+
+/* Ranking Badge */
+.ranking-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}

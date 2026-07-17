@@ -1,0 +1,127 @@
+/* ROOT & TYPOGRAPHY */
+.market-dashboard {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8fafc;
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+/* COLORS */
+.text-accent {
+  color: #0F172A !important;
+}
+.bg-accent {
+  background-color: #0F172A !important;
+}
+.btn-outline-accent {
+  color: #0F172A;
+  border-color: #0F172A;
+}
+.btn-outline-accent:hover {
+  background-color: #0F172A;
+  color: #ffffff;
+}
+
+.text-gain {
+  color: #10B981 !important;
+}
+.text-loss {
+  color: #EF4444 !important;
+}
+
+/* CUSTOM BADGES */
+.badge-gain {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+  font-weight: 600;
+  padding: 0.35em 0.65em;
+}
+.badge-loss {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+  font-weight: 600;
+  padding: 0.35em 0.65em;
+}
+
+/* CARDS */
+.market-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.market-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* TABLES */
+.table-custom th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 1rem;
+}
+
+.table-custom td {
+  font-size: 0.875rem;
+  color: #1e293b;
+  border-bottom: 1px solid #f1f5f9;
+  padding: 1rem 0.5rem;
+}
+
+.table-custom tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* SEARCH & FILTERS */
+.search-bar .input-group-text,
+.search-bar .form-control {
+  border-color: #e2e8f0;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.search-bar .form-control:focus {
+  border-color: #cbd5e1;
+  box-shadow: none;
+}
+
+.filter-select {
+  border-color: #e2e8f0;
+  border-radius: 8px;
+  color: #475569;
+  font-size: 0.875rem;
+  padding-right: 2rem;
+  max-width: 100%;
+}
+
+/* UTILITIES */
+.fs-7 {
+  font-size: 0.875rem;
+}
+
+.news-item:last-child {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
